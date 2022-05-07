@@ -1,0 +1,27 @@
+<header>
+    <%= render 'navbar' , values: @values %>
+</header>
+<div id="loader"></div>
+<div id="content" style="display: none;" >
+  <%= render 'section', values: @values %>
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row py-2">
+        <%  @photographs.each do |photograph| %>
+          <%= render 'card' , photograph: photograph %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <%= render 'footer' , values: @values %>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(() => {
+      loader = document.getElementById('loader');
+      loader.style.display = 'none';
+      content = document.getElementById('content');
+      content.style.display = 'block';
+    }, 4000);
+  });
+</script>

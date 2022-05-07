@@ -1,0 +1,21 @@
+<% flag = photograph.card_image.attached? %>
+<div class="col-md-4 py-2">
+  <div class="card mb-4 box-shadow h-100">
+    <% if flag %>
+      <%= link_to rails_blob_path(photograph.card_image, disposition: "attachment"),download:"file",class:"text-decoration-none text-body" do%>
+        <%= image_tag photograph.card_image,class: "card-img-top banner-image",alt: "card-image",style: "height: 300px; width: 100%; object-fit: cover; display: block;",loading: "lazy" %>
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title"><%= photograph.title %></h5>
+          <p class="card-text"><%= photograph.description %></p>
+          <small class="text-muted mt-auto"><%= photograph.date_taken %></small>
+        </div>
+      <% end %>
+    <% else %>
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title"><%= photograph.title %></h5>
+        <p class="card-text"><%= photograph.description %></p>
+        <small class="text-muted mt-auto"><%= photograph.date_taken %></small>
+      </div>
+    <% end%>
+  </div>
+</div>

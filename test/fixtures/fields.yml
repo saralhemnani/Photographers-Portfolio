@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  navbar_title: MyString
+  instagram_url: MyString
+  pintrest_url: MyString
+  email: MyString
+  phone_number: 1
+  heading: MyString
+  lead_text: MyText
+
+two:
+  navbar_title: MyString
+  instagram_url: MyString
+  pintrest_url: MyString
+  email: MyString
+  phone_number: 1
+  heading: MyString
+  lead_text: MyText
